@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/navbar.css">
+    <link rel="stylesheet" href="stylesheets/contact.css">
+    <title>Document</title>
+</head>
+<body>
+
+<!--        navtigation bar        -->
+
+<div id="navbar">
+    <a href="views.html"><img src="images/logo.jpg" alt="uct-logo" id="logo"></a> 
+    <div class="topnav">
+        <a class='link' href="about.html">About</a>
+        <a class='link' href="resources.html">Resources</a>
+        <a class='link' id="active" href="contact.html">Contact</a>
+        <a class='link' href="views.html">Views</a>
+    </div>
+</div>
+
+<!----    CONTENT      ---->
+
+<section class="s2">
+    <div class="main-container">
+        <h3 id="get-in-touch" style="text-align: center;">Get In Touch</h3>
+        <form action="https://formspree.io/f/mgerpjgy" method="POST" id="contact-form">
+            
+            <label>Name</label>
+            <input type="text" class="input-field" name="name">
+
+            <label>Subject</label>
+            <input type="text" class="input-field" name="subject">
+
+            <label>Message</label>
+            <textarea name="message" class="input-field"></textarea>
+
+            <input id="submit-btn" type="Submit" value="Send">
+        </form>
+
+    </div>
+</section>
+
+
+</body>
+</html>

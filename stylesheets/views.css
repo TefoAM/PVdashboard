@@ -1,0 +1,40 @@
+
+/* --views-BODY-------------------*/
+
+.PV_Container{
+    background-color: #ddd;
+}
+
+.label{
+    padding: 15px 0 12px 0;
+    margin: 0;
+    font-size: 2em;
+    width: 100%;
+    text-align: center;
+}
+
+.figures{
+    height: 20%;
+    padding: 5px 15px 15px 15px;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    gap: 10px;
+}
+
+hr{
+    margin: 0;
+}
+
+.graph{
+    /* font-size: 2em; */
+    border-radius: 10px;
+    background-color: rgba(0, 155, 206, 0.2);
+    height: 400px;
+    width: 30%;
+    margin: auto;
+    padding: 5px;
+    border: 1px solid #111111;
+    overflow: hidden;
+}
+
