@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/navbar.css">
+    <link rel="stylesheet" href="stylesheets/views.css">
+    <!-- chartjs CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+<!--        navtigation bar        -->
+<div id="navbar">
+    <a href="views.html"><img src="images/logo.jpg" alt="uct-logo" id="logo"></a> 
+    <div class="topnav">
+        <a class='link' href="about.html">About</a>
+        <a class='link' href="resources.html">Resources</a>
+        <a class='link' href="contact.html">Contact</a>
+        <a id="active" class='link' href="index.html">Views</a>
+    </div>
+</div>
+<!----    CONTENT      ---->
+<!--   weather station   -->
+<div class="PV_Container">
+    <hr>
+    <h3 class="label">Demonstrate the Viability of a PV System</h3>
+    <hr>
+    <div class="figures">
+        <div class="graph">
+            <canvas id="line" width="300" height="250"></canvas>
+            <script src="scripts/line.js"></script>
+        </div>
+        <div class="graph">
+            <canvas id="bar" width="300" height="250"></canvas>
+            <script src="scripts/bar.js"></script>
+        </div>
+        <div class="graph">
+            <canvas id="pie" width="300" height="90"></canvas>
+            <script src="scripts/pie.js"></script>
+        </div>
+    </div>
+</div>
+
+<!--       PV system       -->
+
+<div class="PV_Container">
+    <hr>
+    <h3 class="label">PV System Performance</h3>
+    <hr>
+    <div class="figures">
+        <div class="graph">
+            <canvas id="pie1" width="300" height="200"></canvas>
+            <script src="scripts/pie1.js"></script>
+        </div>
+        <div class="graph">
+            <canvas id="line1" width="300" height="250"></canvas>
+            <script src="scripts/line1.js"></script>
+        </div>
+        <div class="graph">
+            <canvas id="bar1" width="300" height="250"></canvas>
+            <script src="scripts/bar1.js"></script>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
