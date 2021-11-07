@@ -1,0 +1,48 @@
+
+/* --views-BODY-------------------*/
+
+.PV_Container{
+    background-color: #ddd;
+}
+
+.label{
+    padding: 15px 0 12px 0;
+    margin: 0;
+    font-size: 2em;
+    width: 100%;
+    text-align: center;
+}
+
+.top-container{
+    background-color: beige;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.figures{
+    height: 50%;
+    padding: 5px 15px 15px 15px;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    gap: 10px;
+}
+
+hr{
+    margin: 0;
+}
+
+.graph{
+    /* font-size: 2em; */
+    border-radius: 10px;
+    background-color: rgba(0, 155, 206, 0.2);
+    width: 50%;
+    margin: auto;
+    padding: 5px;
+    border: 1px solid #111111;
+    overflow: hidden;
+}
+

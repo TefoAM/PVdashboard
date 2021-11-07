@@ -1,0 +1,71 @@
+body,html{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+#top-display{
+    background-color: beige;
+    height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    
+}
+
+.current{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.current #temp{
+    color: black;
+    font-size: 50px;
+    font-weight: 90;
+    margin: 5px 0px;
+}
+
+#today{
+    font-size: 25px;
+}
+
+#other{
+    text-align: right;
+    font-size: 15px;
+}
+
+.current #temp span{
+    font-weight: 50;
+}
+
+.current .weather{
+    color: black;
+    font-size: 17px;
+    font-weight: 70;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.current .hi-low{
+    color: black;
+    font-size: 17px;
+    /* font-weight: bold; */
+}
+
+.graph{
+    border-radius: 10px;
+    background-color: rgba(0, 155, 206, 0.2);
+    width: 80%;
+    height: 90%;
+    margin: auto;
+    padding: 5px;
+    border: 1px solid #111111;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
