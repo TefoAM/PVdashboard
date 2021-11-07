@@ -8,13 +8,13 @@
     <link rel="stylesheet" href="stylesheets/views.css">
     <!-- chartjs CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
-    
+    <script src="scripts/charts.js"></script>
     <title>Document</title>
 </head>
 <body>
 <!--        navtigation bar        -->
 <div id="navbar">
-    <a href="views.html"><img src="images/logo.jpg" alt="uct-logo" id="logo"></a> 
+    <a href="views.html"><img src="images/logo.png" alt="uct-logo" id="logo"></a> 
     <div class="topnav">
         <a class='link' href="about.html">About</a>
         <a class='link' href="resources.html">Resources</a>
@@ -26,20 +26,16 @@
 <!--   weather station   -->
 <div class="PV_Container">
     <hr>
-    <h3 class="label">Demonstrate the Viability of a PV System</h3>
+    <a href="solar.html">
+        <h3 class="label">Demonstrate the Viability of a PV System</h3>
+    </a>
     <hr>
     <div class="figures">
-        <div class="graph">
-            <canvas id="line" width="300" height="250"></canvas>
-            <script src="scripts/line.js"></script>
+        <div id="temp-wind">
+            <img src="images/plots/Wind_temp 5Nov.png" alt="wind and temperature plots">
         </div>
-        <div class="graph">
-            <canvas id="bar" width="300" height="250"></canvas>
-            <script src="scripts/bar.js"></script>
-        </div>
-        <div class="graph">
-            <canvas id="pie" width="300" height="90"></canvas>
-            <script src="scripts/pie.js"></script>
+        <div id="irradiance">
+            <img src="images/plots/solar irradiance.png" alt="solar irradiance">
         </div>
     </div>
 </div>
@@ -48,20 +44,13 @@
 
 <div class="PV_Container">
     <hr>
-    <h3 class="label">PV System Performance</h3>
+        <a href="weather.html" class="weather">
+            <h3 class="label">PV System Performance</h3>
+        </a>
     <hr>
     <div class="figures">
-        <div class="graph">
-            <canvas id="pie1" width="300" height="200"></canvas>
-            <script src="scripts/pie1.js"></script>
-        </div>
-        <div class="graph">
-            <canvas id="line1" width="300" height="250"></canvas>
-            <script src="scripts/line1.js"></script>
-        </div>
-        <div class="graph">
-            <canvas id="bar1" width="300" height="250"></canvas>
-            <script src="scripts/bar1.js"></script>
+        <div id="energy-power">
+            <img src="images/plots/power and energy.png" alt="power and energy">
         </div>
     </div>
 </div>

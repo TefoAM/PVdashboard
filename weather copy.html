@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/navbar.css">
+    <link rel="stylesheet" href="stylesheets/weather.css">
+    <!-- chartjs CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+<div id="navbar">
+    <a href="index.html"><img src="images/logo.png" alt="uct-logo" id="logo"></a> 
+    <div class="topnav">
+        <a class='link' href="about.html">About</a>
+        <a class='link' id="active" href="resources.html">Resources</a>
+        <a class='link' href="contact.html">Contact</a>
+        <a class='link' href="index.html">Views</a>
+    </div>
+</div>
+
+<!--   CONTENT   -->
+
+<div class="container_">
+    <div id="top-display">
+        <div id="today">Toda's date</div>
+        <div class="current">
+            <div id="temp">Null</div>
+            <div id="other">
+                <div class="weather">Sunny</div>
+                <div class="hi-low">13°C / 16°C</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- graph -->
+
+<div id="app">
+    <div class="container">
+        <div class="my-5">
+            <form v-on:submit.prevent="getData">
+                <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <h5>Enter A City:</h5>
+                    <div class="input-group">
+                        <input type="text" class="form-control" v-model="city">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </form>
+        </div>
+        <div class="my-5">
+        <div class="alert alert-info" v-show="loading">
+            Loading...
+            </div>
+            <div v-show="chart != null">
+            <canvas id="myChart"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+<script src="scripts/temp.js"></script>
+<script src="scripts/weather.js"></script>
+</html>

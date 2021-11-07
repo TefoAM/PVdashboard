@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/navbar.css">
+    <link rel="stylesheet" href="stylesheets/solar.css">
+    <!-- chartjs CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+<!--        navtigation bar        -->
+<div id="navbar">
+    <a href="views.html"><img src="images/logo.png" alt="uct-logo" id="logo"></a> 
+    <div class="topnav">
+        <a class='link' href="about.html">About</a>
+        <a class='link' href="resources.html">Resources</a>
+        <a class='link' href="contact.html">Contact</a>
+        <a id="active" class='link' href="index.html">Views</a>
+    </div>
+</div>
+<!----    CONTENT      ---->
+
+<button id="getSolarData">Get Data</button>
+<div id="output"></div>
+
+<div class="top-container">
+    <div id="left-col">left-col</div>
+    <div id="right-col">right-col</div>
+</div>
+
+<div class="graph">
+    <canvas id="solar" width="300" height="200"></canvas>
+    <script src="scripts/solar.js"></script>
+</div>
+
+
+
+
+<script>
+    document.getElementById('getSolarData').addEventListener('click', getData);
+
+    function getData(){
+        //fetch('https://api.solcast.com.au/utility_scale_sites/1020-07c4-61c0-630e/forecasts?period=PT30M&hours=160&api_key=1A6psl8osltiuWPalqxrUbIF4fPTwx5U')
+        
+        fetch('http://api.openweathermap.org/data/2.5/solar_radiation?lat=-33.95863&lon=18.460085&appid=bfb57a4f7d89bf58d82abae29aea4696',
+        // fetch('solar_new_json.json',
+            {
+                method: 'get',
+                headers: new Headers({
+                    'test':'test'
+                }),
+            }
+        )
+        .then((res) => res.json())
+        .then((data) => {
+            let output = '<h2>Solar Data</h2';
+            data.forEach(element => {
+                output +=`
+                    <ul>
+                        <li>Ghi: ${element.Ghi}</li>
+                        <li>cloud_opacity: ${element.cloud_opacity}</li>
+                        <li>period_end: ${element.period_end}</li>
+                    </ul>
+                `; 
+            });
+            document.getElementById('output').innerHTML = output;
+        })
+    }
+
+</script>
+
+
+</body>
+</html>
