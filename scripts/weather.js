@@ -26,7 +26,7 @@ function displayResults(weather){
 
 function dateBuilder(d){
     let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    let days = ["Sun","Mon","Tues","Wed","thurs","Fri","Sat"];
+    let days = ["Sun","Mon","Tues","Wed","Thurs","Fri","Sat"];
 
     let day = days[d.getDay()];
     let date = d.getDate();

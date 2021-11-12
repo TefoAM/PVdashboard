@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/navbar.css">
     <link rel="stylesheet" href="stylesheets/views.css">
-    <link rel="stylesheet" href="stylesheets/weather.css">
-    <script src="scripts/weather.js"></script>
     <title>Views</title>
 </head>
 <body>
@@ -25,12 +23,11 @@
 <!--     PV system       -->
 
 <div class="PV_Container">
-        <h3 class="label">Meteorological Data</h3>
-
+        <h3 class="label">PV System Performance</h3>
     <div class="figures">
         <div id="buttons">
             <div id="weather-button">
-                <button onclick="weather" class="left-buttons">Past Two Days</button>
+                <button onclick="weather" class="left-buttons">Weekly</button>
             </div>
             <div id="performance-button">
                 <button onclick="weather" class="left-buttons">Monthly</button>
@@ -39,8 +36,12 @@
                 <button onclick="weather" class="left-buttons">All Time</button>
             </div>
         </div>
+
         <div id="mid-plot">
-            <img id="weather-plot" src="images/plots/wind temp humid.png" alt="solar irradiance">
+            <!--
+                <img src="images/plots/Wind_temp 5Nov.png" alt="wind and temperature plots">
+            -->
+            <img id="performance-plot" src="images/plots/Energy and Power plots for 11-Nov.png" alt="power and energy">
         </div>
 
         <div id="buttons">
@@ -50,29 +51,15 @@
                 </a>
             </div>
             <div id="performance-button">
-                <a href="PV_perf.html">
-                    <button onclick="weather" class="right-buttons">PV Performance</button>
+                <a href="index.html">
+                    <button onclick="weather" class="right-buttons">Meteorological</button>
                 </a>
             </div>
         </div>  
     </div>
-    <!--   header stuff   -->
-
-    <div class="container_">
-        <div id="top-display">
-            <div id="today">Toda's date</div>
-            <div class="current">
-                <div id="temp">Null</div>
-                <div id="other">
-                    <div class="weather">Sunny</div>
-                    <div class="hi-low">13°C / 16°C</div>
-                </div>
-            </div>
-        </div>
-    </div>
-
 </div>
 
-</div>
+<!--   weather station   -->
+
 </body>
 </html>
